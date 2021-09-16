@@ -10,10 +10,20 @@ from dataclasses import dataclass
 
 __author__ = "TFC343"
 
-__version__ = "1.0.0.2"  # <major>.<minor>.<patch>.<build>
+__version__ = "1.1.1.4"  # <major>.<minor>.<patch>.<build>
 
 
 one_hundred_and_thirty_seven = 137  # efficient method of accesing number: 137
+
+
+def sarc_text(text):
+    """makes text sarcastic"""
+    text = list(text)
+    for i in rlen(text):
+        if i % 2:
+            text[i] = text[i].upper()
+    text = ''.join(text)
+    return text
 
 
 def rlen(list_):
@@ -104,4 +114,7 @@ if __name__ == '__main__':
     print(repr(MULT))
     print(f"result of 2d6: {roll_dice('2d6')}")
     time.sleep(0.2)
+
+    print(sarc_text('yeah, of course you did'))
+
     print(timer.get_time())
